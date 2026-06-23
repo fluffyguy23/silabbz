@@ -1,0 +1,13 @@
+{
+  "name": "silabbz-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SI Labbz backend API — Vercel serverless functions (zero dependencies).",
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel --prod"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
