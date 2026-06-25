@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0a18"/>
+      <stop offset="1" stop-color="#0b0720"/>
+    </linearGradient>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4f8cff"/>
+      <stop offset="0.5" stop-color="#8b5cf6"/>
+      <stop offset="1" stop-color="#a855f7"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.82" cy="0.18" r="0.7">
+      <stop offset="0" stop-color="#6d4ef0" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#6d4ef0" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <rect x="0" y="0" width="1200" height="8" fill="url(#grad)"/>
+
+  <!-- logo tile + bird -->
+  <g transform="translate(110,140)">
+    <rect width="120" height="120" rx="30" fill="url(#grad)"/>
+    <g transform="translate(10,10)">
+      <polygon points="20,18 44,18 44,52" fill="#ffffff" opacity=".6"/>
+      <polygon points="20,82 44,52 44,82" fill="#ffffff" opacity=".6"/>
+      <polygon points="44,20 44,84 84,52" fill="#ffffff"/>
+      <polygon points="46,22 74,10 60,28" fill="#ffffff"/>
+    </g>
+  </g>
+
+  <text x="260" y="200" font-family="Arial, Helvetica, sans-serif" font-size="78" font-weight="700" fill="#ffffff">SI Labbz</text>
+  <text x="264" y="252" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="400" fill="#a4a4c0">Software Development Agency</text>
+
+  <text x="110" y="378" font-family="Arial, Helvetica, sans-serif" font-size="56" font-weight="700" fill="#ffffff">Building Digital Products</text>
+  <text x="110" y="448" font-family="Arial, Helvetica, sans-serif" font-size="56" font-weight="700" fill="url(#grad)">That Take Flight</text>
+
+  <text x="112" y="524" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="500" fill="#c9c9e0">Web Apps  ·  Mobile Apps  ·  QA &amp; Testing  ·  Digital Marketing</text>
+  <text x="112" y="576" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#7e7ea0">5+ years  ·  20+ in-house experts  ·  silabbz.com</text>
+</svg>

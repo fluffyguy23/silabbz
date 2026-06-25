@@ -1,0 +1,7 @@
+# SI Labbz — robots.txt
+# Allow all crawlers full access.
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://silabbz.com/sitemap.xml

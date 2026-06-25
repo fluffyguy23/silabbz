@@ -1,0 +1,14 @@
+{
+  "name": "SI Labbz — Software Development Agency",
+  "short_name": "SI Labbz",
+  "description": "Software development agency — web apps, mobile apps, QA & testing, and digital marketing.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#06060c",
+  "theme_color": "#06060c",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}
