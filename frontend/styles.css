@@ -262,15 +262,27 @@ input, textarea { font-family: inherit; }
 .svc-card:hover::before, .proj-card:hover::before, .career-card:hover::before { opacity: 1; }
 
 /* ---------- Services ---------- */
-.services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
-.svc-card { padding: 32px 26px; border-radius: var(--radius-lg); background: linear-gradient(165deg, var(--glass), rgba(255, 255, 255, 0.01)); border: 1px solid var(--border); transition: transform 0.35s var(--ease), box-shadow 0.35s; }
+.services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 26px; }
+.svc-card { padding: 40px 36px; border-radius: var(--radius-lg); background: linear-gradient(165deg, var(--glass), rgba(255, 255, 255, 0.01)); border: 1px solid var(--border); transition: transform 0.35s var(--ease), box-shadow 0.35s; }
 .svc-card:hover { transform: translateY(-8px); box-shadow: 0 30px 60px -30px var(--glow-purple); }
-.svc-ic { width: 56px; height: 56px; border-radius: 16px; display: grid; place-items: center; background: var(--grad-soft); border: 1px solid var(--border); margin-bottom: 22px; }
-.svc-ic svg { width: 28px; height: 28px; fill: none; stroke: var(--blue-bright); stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
-.svc-card h3 { font-family: var(--font-display); font-size: 1.18rem; margin-bottom: 10px; line-height: 1.25; }
-.svc-card p { font-size: 0.92rem; color: var(--text-muted); margin-bottom: 16px; }
-.svc-tags { display: flex; flex-wrap: wrap; gap: 7px; }
-.svc-tags li { font-size: 0.76rem; padding: 5px 11px; border-radius: 8px; background: var(--surface); border: 1px solid var(--border); color: var(--text-muted); }
+.svc-num {
+  position: absolute; top: 28px; right: 32px; font-family: var(--font-display);
+  font-size: 3.4rem; font-weight: 700; line-height: 1; letter-spacing: -0.02em;
+  background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent;
+  opacity: 0.22; transition: opacity 0.35s, transform 0.35s var(--ease); pointer-events: none;
+}
+.svc-card:hover .svc-num { opacity: 0.6; transform: scale(1.06); }
+.svc-ic { width: 62px; height: 62px; border-radius: 17px; display: grid; place-items: center; background: var(--grad-soft); border: 1px solid var(--border); margin-bottom: 24px; }
+.svc-ic svg { width: 30px; height: 30px; fill: none; stroke: var(--blue-bright); stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.svc-card h3 { font-family: var(--font-display); font-size: 1.42rem; margin-bottom: 12px; line-height: 1.25; }
+.svc-card p { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 22px; max-width: 46ch; }
+.svc-list { display: grid; grid-template-columns: 1fr 1fr; gap: 11px 20px; padding-top: 20px; border-top: 1px solid var(--border); }
+.svc-list li { position: relative; padding-left: 26px; font-size: 0.89rem; color: var(--text-muted); line-height: 1.45; }
+.svc-list li::before {
+  content: "✓"; position: absolute; left: 0; top: 0; font-size: 0.85rem; font-weight: 700;
+  width: 17px; height: 17px; line-height: 17px; text-align: center; border-radius: 6px;
+  background: var(--grad-soft); border: 1px solid var(--border); color: var(--blue-bright);
+}
 
 /* ---------- Why ---------- */
 .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
@@ -430,7 +442,6 @@ input, textarea { font-family: inherit; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 1080px) {
-  .services-grid { grid-template-columns: repeat(2, 1fr); }
   .why-grid { grid-template-columns: repeat(2, 1fr); }
   .tech-grid { grid-template-columns: repeat(4, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
@@ -450,6 +461,7 @@ input, textarea { font-family: inherit; }
   .contact-grid { grid-template-columns: 1fr; gap: 36px; }
   .career-grid { grid-template-columns: 1fr; }
   .tst-grid { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: 1fr; }
   .projects-grid { grid-template-columns: repeat(2, 1fr); }
   .proj-featured { grid-column: span 2; }
 }
@@ -457,7 +469,9 @@ input, textarea { font-family: inherit; }
 @media (max-width: 640px) {
   .container { padding-inline: 18px; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
-  .services-grid { grid-template-columns: 1fr; }
+  .svc-card { padding: 30px 24px; }
+  .svc-num { font-size: 2.6rem; top: 24px; right: 24px; }
+  .svc-list { grid-template-columns: 1fr; }
   .why-grid { grid-template-columns: 1fr; }
   .tech-grid { grid-template-columns: repeat(3, 1fr); }
   .projects-grid { grid-template-columns: 1fr; }
